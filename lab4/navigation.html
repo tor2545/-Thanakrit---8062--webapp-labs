@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+           ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: black;
+           }
+
+           li {
+            font-weight: bold;
+           }
+
+           .nav {
+            float: left;
+            display: inline;
+           }
+           
+           li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+           }
+
+            li a:hover {
+            background-color: yellow;
+           }
+
+           li a:active {
+            background-color: purple;
+           }
+           
+           .p1 {
+                border: 5px solid blue;
+                padding: 5px 5px;
+                background-color: cyan;
+                width: 10%;
+            }
+
+            .p2 {
+                border: 5px solid green;
+                padding: 5px 5px;
+                background-color: greenyellow;
+                width: 10%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li class="nav"><a href="#Home">Unordered List</a></li>
+            <li class="nav"><a href="#orderer-list">Ordered List</a></li>
+        </ul>
+        <p class="p1">This is an unordered list: </p>
+            <ol style="list-style-type:circle;">
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Coca Cola</li>
+            </ol>
+        <p class="p2">This is an ordered list: </p>
+            <ol type="i">
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Coca Cola</li>
+    </body>
