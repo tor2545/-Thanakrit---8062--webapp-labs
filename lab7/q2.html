@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Challenge: ID changer</title>
+        <style>
+            #id-card {
+                border:1px solid black;
+                border-radius:5px;
+                width: 400px;
+                font-family: monospace;
+                padding: 6px;
+                background: rgb(201, 255, 224);
+            }
+            #id-name {
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="id-card" style="">
+            <h3>KKU identification card</h3>
+            <img src="https://th.kku.ac.th/wp-content/uploads/2022/01/1.-official-logo-2022-26-500x465.png">
+            <h1 id="id-name">First last</h1>
+        </div>
+        
+    <script>
+        let h1Eel = document.getElementById("id-name");
+            h1Eel.innerHTML = "Thanakrit Kunchungtong";
+
+    </script>
+    </body>
+</html>
