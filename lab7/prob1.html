@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simple DOM exaple</title>
+  </head>
+  <body>
+    <section>
+      <a href="https://www.en.kku.ac.th">
+        <img id="kku-logo" src="faculty_of_engineering.jpg" alt="Faculty of Engineering">
+      </a>
+      <div id="custom-element">
+        <p>We hope you enjoy learning</p>
+      </div>
+    </section>
+
+    <script>
+      // Replace the KKU logo image with the Faculty of Engineering image
+      document.getElementById("kku-logo").src = "engineering.jpg";
+
+      // Add styles to the custom element
+      const customElement = document.getElementById("custom-element");
+      customElement.style.color = "white";
+      customElement.style.background = "black";
+      customElement.style.fontSize = "large";
+      customElement.style.width = "300px";
+      customElement.style.padding = "0.1px";
+      customElement.style.textAlign = "center";
+      
+      document.title = "KKU Engineering";
+      
+      document.getElementById("kku-logo").addEventListener("click", function() {
+        window.location.href = "https://www.en.kku.ac.th";
+      
+      });
+    </script>
+  </body>
+</html>
