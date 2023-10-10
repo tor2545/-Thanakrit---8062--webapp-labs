@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GitHub User Info</title>
+</head>
+<body>
+    <h1 style="text-align: center;" id="name"><a href="#" target="_blank"></a></h1>
+    <img style="display: block; margin: 0 auto; border-radius: 50%;"  id="avatar" src="" alt="Avatar">
+
+    <script>
+        
+        fetch('https://api.github.com/users/tor2545')
+            .then(response => response.json())
+            .then(data => {
+                
+                const nameElement = document.getElementById('name');
+                const githubUrl = data.html_url;
+                nameElement.querySelector('a').textContent = data.name;
+                nameElement.querySelector('a').href = githubUrl;
+
+                const avatarElement = document.getElementById('avatar');
+                avatarElement.src = data.avatar_url;
+
+                nameElement.querySelector('a').addEventListener('click', (event) => {
+                    event.preventDefault();
+                    window.open(githubUrl, '_blank');
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching data from GitHub API:', error);
+            });
+    </script>
+</body>
+</html>
